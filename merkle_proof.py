@@ -14,15 +14,6 @@ def merkle_proof(tx, merkle_tree):
     #### YOUR CODE HERE
 
 
-def get_max_depth_node(nodes):
-    """Helper function to retrieve the node with the maximum depth.
-    Helpful for pairing nodes for hashing in verify_proof"""
-    curr = nodes[0]
-    for i in range(0, len(nodes)):
-        if nodes[i].depth > curr.depth:
-            curr = nodes[i]
-    return curr
-
 
 def verify_proof(tx, merkle_proof):
     """Given a Merkle proof - constructed via `merkle_proof(...)` - verify

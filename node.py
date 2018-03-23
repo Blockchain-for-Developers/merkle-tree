@@ -3,8 +3,7 @@ class Node:
 	"""Node wrapper class implementation. 
 	Useful for tracking depth of a node when
 	constructing the merkle proof"""
-	def __init__(self, depth, direction, tx):
-		self._depth = depth
+	def __init__(self, direction, tx):
 		self._direction = direction
 		self._tx = tx
 
@@ -20,10 +19,6 @@ class Node:
 			return self.__dict__ == other.__dict__
 		return False
 	
-	@property
-	def depth(self):
-		"""int: Allow user to query node for its depth"""
-		return self._depth
 
 	@property
 	def direction(self):
